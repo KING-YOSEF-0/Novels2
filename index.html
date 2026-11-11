@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211a16">
+  <meta name="description" content="A quiet old-world library of motivational stories and novels by KING_YOSEF_.">
+  <title>The Gilded Lantern — Stories by KING_YOSEF_</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="The Gilded Lantern home"><span class="brand-mark">✦</span><span>The Gilded Lantern</span></a>
+    <nav class="top-nav" aria-label="Main navigation"><a href="#library">The Library</a><a href="#about">About the Author</a></nav>
+    <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" title="Toggle quiet ambience"><span class="sound-icon">♫</span><span class="sound-label">Quiet mode</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-ornament" aria-hidden="true"><span>❧</span></div>
+      <p class="eyebrow">A little light for the long road</p>
+      <h1 id="hero-title">Come in from<br><em>the dark.</em></h1>
+      <p class="hero-copy">Stories of courage, patience, and the small lights<br class="desktop-only"> we carry through the world.</p>
+      <div class="author-line"><span class="rule"></span><span>Written by <strong>KING_YOSEF_</strong></span><span class="rule"></span></div>
+      <a class="down-link" href="#library" aria-label="Explore the library">↓</a>
+      <div class="hero-lantern" aria-hidden="true"><div class="lantern-glow"></div><div class="lantern-roof"></div><div class="lantern-glass"><i></i></div><div class="lantern-base"></div><div class="lantern-stem"></div></div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-heading"><div><p class="eyebrow">The shelves are open</p><h2>A Library of <em>Small Wonders</em></h2></div><p class="section-note">Choose a tale. Settle in.<br>There is no hurry here.</p></div>
+      <div class="library-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Find a story…" autocomplete="off" aria-label="Search stories"></label><div class="filters" role="group" aria-label="Filter by collection"><button class="filter active" data-filter="all">All tales <span id="allCount"></span></button><button class="filter" data-filter="novel">The novel</button><button class="filter" data-filter="story">Short stories</button><button class="filter" data-filter="saved">Saved <span id="savedCount"></span></button></div><span class="shelf-count" id="shelfCount" aria-live="polite"></span></div>
+      <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>❧</span><p>No tale found on this shelf.</p></div>
+    </section>
+
+    <section class="quote-band"><span class="quote-mark">“</span><blockquote>The world is not saved by grand gestures alone,<br>but by the lights we keep for one another.</blockquote><span class="quote-rule"></span><span class="quote-credit">A thought from the keeper's shelf</span></section>
+    <section class="about-section" id="about"><div class="about-seal">✦<span>✧</span></div><div><p class="eyebrow">The hand behind the pages</p><h2>Stories by <em>KING_YOSEF_</em></h2><p>These pages gather hopeful tales for quiet evenings and difficult mornings. Each one carries a small reminder: there is still a way forward, and it may begin with one brave step.</p><a href="#library" class="text-link">Return to the shelves <span>↗</span></a></div></section>
+  </main>
+  <footer><span>Made for slow reading & warm lamplight</span><span class="footer-star">✦</span><strong>KING_YOSEF_</strong><span>© <span id="year"></span> The Gilded Lantern</span></footer>
+
+  <dialog class="reader" id="reader" aria-labelledby="readerTitle"><div class="reader-frame"><button class="close-reader" id="closeReader" aria-label="Close reader">×</button><div class="reader-tools"><button id="fontDown" aria-label="Decrease text size">A−</button><button id="fontUp" aria-label="Increase text size">A＋</button><button id="readerSave" class="save-reader" aria-label="Save this story">♡ Save</button></div><div class="reader-meta" id="readerMeta"></div><h2 id="readerTitle"></h2><div class="reader-divider">✦ ❧ ✦</div><div class="reader-content" id="readerContent"></div><div class="reader-bottom"><button id="prevBook">← Previous</button><span id="readerPosition"></span><button id="nextBook">Next →</button></div><div class="reader-signature">Written by <strong>KING_YOSEF_</strong></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="library.js"></script><script src="script.js"></script>
+</body>
+</html>
